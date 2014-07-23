@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head lang="en">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/chart/d3.js"></script>
+    <script src="squel.js"></script>
+    <link rel="stylesheet" href="ms/angular-multi-select.css">
+    <script type="text/javascript" src="angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="ng-grid.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="ng-grid.js"></script>
+    <script src="js/chart/nv.d3.js"></script>
+    <script src="js/chart/angularjs-nvd3-directives.js"></script>
+    <script src="ms/angular-multi-select.js"></script>
+    <script type="text/javascript" src="ng-grid.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MIFOS Query Builder</title>
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/dashboard.css" rel="stylesheet">
+
+</head>
+<body  ng-controller="MyCtrl">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Query Builder</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="businessObjects" ng-repeat="b in businesObjects"><a ng-click="selectBo(b.name)" href="#">{{b.name}}</a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Filters</h1>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder" ng-repeat="(key,value) in currentBOFilters">
+                    {{key}}:
+                    <div
+
+                            multi-select
+                            input-model="filterInputData[key]"
+                            button-label="icon name"
+                            max-labels="2"
+                            item-label="icon name maker"
+                            tick-property="ticked"
+                            output-model="filterOutputData[key]"
+                            >
+                    </div>
+                </div>
+            </div>
+            <h1 class="page-header">Search in fields:</h1>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <div
+                            multi-select
+                            max-labels="2"
+                            input-model="tableFields"
+                            button-label="text"
+                            item-label="text operator"
+                            helper-elements="all"
+                            tick-property="ticked"
+                            output-model="searchInFields"
+                            >
+                    </div>
+                </div>
+            </div>
+            <h1 class="page-header">Custom filters:</h1>
+
+            <div class="row placeholders">
+                <div class="col-xs-9 col-sm-6 placeholder">
+                    <table class="table">
+                        <tr  ng-repeat="(key,value) in searchFields" condition="$first" >
+                            <td ng-if="!$first">
+                                <select ng-model="value.andOr">
+                                    <option value="and">and</option>
+                                    <option value="or">or</option>
+                                </select>
+                            </td>
+                            <td ng-if="$first" >
+
+                            </td>
+                            <td>{{key}}</td>
+                            <td><select ng-model="value.operator">
+                                <option value="=">is</option>
+                                <option value=">">greater than</option>
+                                <option value="<">less than</option>
+                                <option value="!=">is not</option>
+                                <option value="like">like</option>
+                            </select></td>
+
+                            <td>
+                                <select ng-model="value.value2">
+                                    <option  ng-repeat="(key,value) in tableFields" value="{{value.name}}">{{value.text}}</option>
+                                </select>
+                            </td>
+                            <td><select ng-model="value.operator2">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">*</option>
+                                <option value="/">/</option>
+                            </select></td>
+                            <td><input ng-model="value.value"></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <button class="button" ng-click="loadData()">Get Data</button>
+            <h2 class="sub-header">results</h2>
+            <div class="table-responsive">
+                <!--<table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1,001</td>
+                        <td>Lorem</td>
+                        <td>ipsum</td>
+                        <td>dolor</td>
+                        <td>sit</td>
+                    </tr>
+                    </tbody>
+                </table>-->
+                <div style="height: 400px" class="gridStyle" ng-grid="gridOptions">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
