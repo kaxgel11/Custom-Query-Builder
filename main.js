@@ -416,6 +416,7 @@ app.controller('MyCtrl', function ($scope) {
                 $scope.myData = result;
                 console.log($scope.myData)
                 $scope.$apply();
+                $('#dataTable').dataTable();
             });
 
         }
@@ -534,7 +535,7 @@ app.controller('MyCtrl', function ($scope) {
             return d.y;
         };
     };
-    $scope.gridOptions = { data: 'myData', showGroupPanel: true, enableCellSelection: true, enablePinning: true,
+   /* $scope.gridOptions = { data: 'myData', showGroupPanel: true, enableCellSelection: true, enablePinning: true,
         enableColumnResize: true,
-        selectWithCheckboxOnly: true, showFilter: true, showFooter: true, showSelectionCheckbox: true};
+        selectWithCheckboxOnly: true, showFilter: true, showFooter: true, showSelectionCheckbox: true};*/
 });
