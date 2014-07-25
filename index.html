@@ -117,21 +117,25 @@
                                 <option value=">">greater than</option>
                                 <option value="<">less than</option>
                                 <option value="!=">is not</option>
-                                <option value="like">like</option>
+                                <option ng-if="!value.compareToOtherField" value="like">like</option>
+                                <option ng-if="!value.compareToOtherField&&value.type!=='text'" value="BETWEEN">BETWEEN</option>
                             </select></td>
-
                             <td>
+                               <input title="Compare to other field" ng-model="value.compareToOtherField" type="checkbox">
+                            </td>
+                            <td ng-if="value.compareToOtherField">
                                 <select ng-model="value.value2">
                                     <option  ng-repeat="(key,value) in tableFields" value="{{value.name}}">{{value.text}}</option>
                                 </select>
                             </td>
-                            <td><select ng-model="value.operator2">
+                            <td ng-if="value.compareToOtherField"><select ng-model="value.operator2">
                                 <option value="+">+</option>
                                 <option value="-">-</option>
                                 <option value="*">*</option>
                                 <option value="/">/</option>
                             </select></td>
-                            <td><input ng-model="value.value"></td>
+                            <td><input type="{{value.type}}" ng-model="value.value"></td>
+                            <td ng-if="value.operator=='BETWEEN'"><input type="{{value.type}}" ng-model="value.value3"></td>
                         </tr>
                     </table>
                 </div>

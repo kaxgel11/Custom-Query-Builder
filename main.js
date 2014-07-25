@@ -362,6 +362,14 @@ app.controller('MyCtrl', function ($scope) {
                             whereQuery+=$scope.searchFields[$scope.searchInFields[i].text].operator2;
                         }
                         whereQuery += $scope.searchFields[$scope.searchInFields[i].text].value;
+                        if($scope.searchFields[$scope.searchInFields[i].text].operator==="BETWEEN"){
+                            if($scope.searchFields[$scope.searchInFields[i].text].type==="date")
+                                whereQuery += "'";
+                            whereQuery+=" and ";
+                            if($scope.searchFields[$scope.searchInFields[i].text].type==="date")
+                                whereQuery += "'";
+                            whereQuery+=$scope.searchFields[$scope.searchInFields[i].text].value3;
+                        }
                         if ($scope.typeMap[$scope.searchInFields[i].text] === "text") {
                             if ($scope.searchFields[$scope.searchInFields[i].text].operator === "like")
                                 whereQuery += "%";

@@ -23,23 +23,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6714" max-vertical-offset="8092">
-              <caret line="418" column="36" selection-start-line="418" selection-start-column="36" selection-end-line="418" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.5814361" vertical-offset="1164" max-vertical-offset="6613">
+              <caret line="183" column="26" selection-start-line="183" selection-start-column="26" selection-end-line="183" selection-end-column="26" />
               <folding>
-                <element signature="e#19421#21747#0" expanded="false" />
+                <element signature="e#909#2165#0" expanded="false" />
+                <element signature="e#2184#2468#0" expanded="false" />
+                <element signature="e#2485#5193#0" expanded="false" />
+                <element signature="e#19992#22318#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24185249" vertical-offset="2715" max-vertical-offset="3417">
-              <caret line="168" column="65" selection-start-line="168" selection-start-column="65" selection-end-line="168" selection-end-column="65" />
+            <state vertical-scroll-proportion="-4.230769" vertical-offset="1930" max-vertical-offset="3485">
+              <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -62,8 +65,8 @@
         <option value="$PROJECT_DIR$/stylesheets/nv.d3.css" />
         <option value="$PROJECT_DIR$/main2.js" />
         <option value="$PROJECT_DIR$/t.html" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -360,16 +363,16 @@
       <updated>1400759858966</updated>
       <workItem from="1404550628704" duration="1452000" />
       <workItem from="1405422028566" duration="30231000" />
-      <workItem from="1406115287079" duration="3320000" />
+      <workItem from="1406115287079" duration="6643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35003000" />
+    <option name="totallyTimeSpent" value="38326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -416,7 +419,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -508,6 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="2245" max-vertical-offset="15929">
           <caret line="144" column="16" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -564,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6816" max-vertical-offset="8092">
-          <caret line="418" column="36" selection-start-line="418" selection-start-column="36" selection-end-line="418" selection-end-column="36" />
-          <folding>
-            <element signature="e#19421#21747#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shCore.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6715">
@@ -584,9 +578,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24185249" vertical-offset="2715" max-vertical-offset="3417">
-          <caret line="168" column="65" selection-start-line="168" selection-start-column="65" selection-end-line="168" selection-end-column="65" />
+        <state vertical-scroll-proportion="-4.230769" vertical-offset="1930" max-vertical-offset="3485">
+          <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5814361" vertical-offset="1164" max-vertical-offset="6613">
+          <caret line="183" column="26" selection-start-line="183" selection-start-column="26" selection-end-line="183" selection-end-column="26" />
+          <folding>
+            <element signature="e#909#2165#0" expanded="false" />
+            <element signature="e#2184#2468#0" expanded="false" />
+            <element signature="e#2485#5193#0" expanded="false" />
+            <element signature="e#19992#22318#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
