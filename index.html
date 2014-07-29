@@ -79,10 +79,11 @@
                     </div>
                 </div>
             </div>
-            <h1 class="page-header">Search in fields:</h1>
+            <h1 class="page-header">Report Settings:</h1>
 
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
+                    <h2>Search in fields:</h2>
                     <div
                             multi-select
                             max-labels="2"
@@ -94,6 +95,22 @@
                             output-model="searchInFields"
                             >
                     </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <h2>Fields in Report:</h2>
+                    <div
+                            multi-select
+                            max-labels="2"
+                            input-model="boFields"
+                            button-label="name"
+                            item-label="name operator"
+                            helper-elements="all"
+                            tick-property="ticked"
+                            output-model="boFieldsChecked"
+                            >
+                    </div>
+
                 </div>
             </div>
             <h1 class="page-header">Custom filters:</h1>

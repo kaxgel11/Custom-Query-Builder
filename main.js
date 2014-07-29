@@ -11,6 +11,8 @@ app.controller('MyCtrl', function ($scope) {
     $scope.filterOutputData = {};
     $scope.filterInputData = {};
     $scope.filterType = "";
+    $scope.boFields=[];
+    $scope.boFieldsChecked=[];
     $scope.businesObjects = [
         {name: "clients"},
         {name: "offices"},
@@ -188,6 +190,7 @@ app.controller('MyCtrl', function ($scope) {
     $scope.selectedTables = [];
     $scope.$watch("bo", function () {
         if ($scope.bo[0]) {
+
             $scope.chartFields = [];
             $scope.currentBOFilters = {};
             $scope.tableFields = [];
@@ -248,6 +251,15 @@ app.controller('MyCtrl', function ($scope) {
     $scope.selectBo=function(bo){
         if (bo) {
             $scope.currentBO=bo;
+            for (i = 0; i < $scope.db[$scope.currentBO].fields.length; i++) {
+                $scope.boFields.push(
+                    {
+                        text:"`" + $scope.db[$scope.currentBO].tableName + "`.`" + $scope.db[$scope.currentBO].fields[i].name + "`",
+                        name:$scope.db[$scope.currentBO].fields[i].name
+                });
+            }
+
+
             $scope.chartFields = [];
             $scope.currentBOFilters = {};
             $scope.tableFields = [];
